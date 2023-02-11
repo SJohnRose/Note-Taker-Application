@@ -35,6 +35,7 @@ const writeToFile = (destination, content) =>
   );
 
 
+// Read content from db.json file and append new object
 const readAndAppend = (content, file) => {
   fs.readFile(file, 'utf8', (err, data) => {
     if (err) {
@@ -47,6 +48,7 @@ const readAndAppend = (content, file) => {
   });
 };
 
+// Read content from db.json and delete object with id
 const readAndDelete = (id, file) => {
     fs.readFile(file, 'utf8', (err, data) => {
       if (err) {
