@@ -48,6 +48,8 @@ const readAndAppend = (content, file) => {
 };
 
 
+
+
 // GET Route for retrieving all the notes
 app.get('/api/notes', (req, res) => {
   console.info(`${req.method} request received for notes`);
@@ -74,6 +76,12 @@ app.post('/api/notes', (req, res) => {
     res.error('Error in adding note');
   }
 });
+
+// DELETE Route to remove a note
+app.delete('/api/notes/:id', (req,res) => {
+    console.info(`${req.method} request received to delete a note`);
+});
+
 
 // Wilcard route
 app.get('/*', function(req, res) {
