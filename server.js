@@ -47,6 +47,24 @@ const readAndAppend = (content, file) => {
   });
 };
 
+const readAndDelete = (id, file) => {
+    fs.readFile(file, 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+      } else {
+        const parsedData = JSON.parse(data);
+        for(i=0; i<parsedData.length; i++) {
+            if (parsedData[i].note_id == id) {
+                parsedData.splice(i,1);
+            }
+        }
+        //parsedData.push(content);
+        console.log(parsedData);
+        writeToFile(file, parsedData);
+      }
+    });
+  };
+
 
 
 
@@ -79,7 +97,8 @@ app.post('/api/notes', (req, res) => {
 
 // DELETE Route to remove a note
 app.delete('/api/notes/:id', (req,res) => {
-    console.info(`${req.method} request received to delete a note`);
+    console.info(`${req.method} request received to delete a note with id ${req.params.id}`);
+    readAndDelete(req.params.id,'./db/db.json');
 });
 
 
