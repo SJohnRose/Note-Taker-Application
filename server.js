@@ -6,7 +6,7 @@ const util = require('util');
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
 
-const PORT = 3001;
+const PORT = 8080;
 
 const app = express();
 
