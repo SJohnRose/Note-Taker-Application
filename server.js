@@ -6,7 +6,7 @@ const util = require('util');
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
 
-const PORT = 8080;
+//const PORT = 8080;
 
 const app = express();
 
@@ -110,6 +110,6 @@ app.get('/*', function(req, res) {
   });
   
 
-app.listen(PORT, () =>
-  console.log(`App listening at http://localhost:${PORT} 🚀`)
-);
+// app.listen(PORT, () =>
+//   console.log(`App listening at http://localhost:${PORT} 🚀`)
+// );
