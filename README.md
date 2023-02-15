@@ -40,5 +40,5 @@ https://github.com/SJohnRose/Note-Taker-Application/blob/main/assets/Screenshot.
 
 # How to access the Note Taker application?
 Please use this link: https://github.com/SJohnRose/Note-Taker-Application
-
+Deployed at: https://shamini-note-taker-app.herokuapp.com/
 
